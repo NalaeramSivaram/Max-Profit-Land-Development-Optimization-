@@ -1,9 +1,4 @@
-🏗️ Max Profit Land Development Optimization
-
-
-
-
-
+### 🏗️ Max Profit Land Development Optimization ###
 
 📌 Problem Summary
 
