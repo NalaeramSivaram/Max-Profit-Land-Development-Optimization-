@@ -56,16 +56,14 @@ The solution is based on **evaluating all feasible construction combinations** r
 ### Step-by-Step Approach
 
 1. **Iterate through possible counts** of each property type  
- - Theatre, Pub, Commercial Park
+  - Theatre, Pub, Commercial Park
 2. **Validate construction time**
- - Ensure total build time does not exceed `n`
+  - Ensure total build time does not exceed `n`
 3. **Calculate operational time**
- - Remaining time after construction
+  - Remaining time after construction
 4. **Compute earnings**
-
----
-
 earnings = operational_time × earning_rate
+---
 5. **Track maximum profit**
 - Store the configuration yielding highest earnings
 6. **Output optimal mix**
