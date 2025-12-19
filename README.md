@@ -36,3 +36,30 @@ The objective is to determine the **optimal mix of properties** that maximizes t
 - Earnings start only after build completion
 - Input: total time units `n`
 - Output format:
+
+
+---
+
+## 🎯 Objective
+
+Given `n` units of time:
+- Choose the number of Theatres, Pubs, and Commercial Parks
+- Maximize total earnings
+- Return the optimal configuration
+
+---
+
+## 🧠 Solution Approach
+
+- Greedy selection based only on earnings is incorrect
+- The algorithm evaluates **all feasible combinations**
+- For each combination:
+- Ensures total build time ≤ `n`
+- Computes operational earnings
+- Selects the configuration with **maximum profit**
+
+This guarantees correctness under all valid inputs.
+
+---
+
+
