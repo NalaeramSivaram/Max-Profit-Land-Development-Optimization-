@@ -1,14 +1,14 @@
 ### 🏗️ Max Profit Land Development Optimization ###
 
-📌 Problem Summary
+# 📌 Problem Summary
 
 This project solves a profit maximization problem under time constraints.
 
 A landowner can construct different types of properties on infinite land, but:
 
-Only one property can be built at a time
+ Only one property can be built at a time
 
-Each property has a fixed construction time
+ Each property has a fixed construction time
 
 Earnings begin only after construction is completed
 
