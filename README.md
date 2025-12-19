@@ -36,7 +36,7 @@ The objective is to determine the **optimal mix of properties** that maximizes t
 - Earnings start only after build completion
 - Input: total time units `n`
 - Output format:
-
+T:<count> P:<count> C:<count>
 
 ---
 
@@ -49,17 +49,86 @@ Given `n` units of time:
 
 ---
 
-## 🧠 Solution Approach
+## 🧠 Program Approach
 
-- Greedy selection based only on earnings is incorrect
-- The algorithm evaluates **all feasible combinations**
-- For each combination:
-- Ensures total build time ≤ `n`
-- Computes operational earnings
-- Selects the configuration with **maximum profit**
+The solution is based on **evaluating all feasible construction combinations** rather than using a greedy approach.
 
-This guarantees correctness under all valid inputs.
+### Step-by-Step Approach
+
+1. **Iterate through possible counts** of each property type  
+ - Theatre, Pub, Commercial Park
+2. **Validate construction time**
+ - Ensure total build time does not exceed `n`
+3. **Calculate operational time**
+ - Remaining time after construction
+4. **Compute earnings**
 
 ---
 
+earnings = operational_time × earning_rate
+5. **Track maximum profit**
+- Store the configuration yielding highest earnings
+6. **Output optimal mix**
+- Display counts of T, P, and C
 
+### Why This Works
+
+- Greedy selection fails because high-earning properties take longer to build
+- The approach explicitly models **time-to-build vs earning trade-off**
+- Limited property types keep the search space manageable
+
+---
+
+## 🧪 Sample Test Cases
+
+### Test Case 1
+
+Input:
+Time Unit: 7
+
+Output:
+T:1 P:0 C:0
+Earnings: $3000
+
+---
+
+## 📊 Why These Results Are Optimal
+
+- Higher earning properties may delay revenue due to longer construction time
+- Faster construction enables earlier operational earnings
+- The algorithm balances **build time vs earning rate**
+
+---
+
+## ⏱️ Complexity Analysis
+
+- **Time Complexity:** O(n²)
+- **Space Complexity:** O(1)
+
+Efficient due to a small and bounded search space.
+
+---
+
+## 🚧 Challenges & Fixes
+
+| Issue | Resolution |
+|-----|------------|
+Greedy strategy failed | Evaluated all feasible combinations |
+Incorrect profit calculation | Separated build time and earning time |
+Edge cases for small `n` | Added feasibility checks |
+Delayed revenue from large builds | Accounted operational duration |
+
+---
+
+## 🧠 Key Learnings
+
+- Greedy algorithms can fail under time constraints
+- Trade-off analysis is essential for real-world optimization
+- Correct modeling leads to optimal decisions
+
+---
+
+## ▶️ How to Run
+
+```bash
+python Max_Profit.py
